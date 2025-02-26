@@ -24,7 +24,7 @@
 
         
         document.addEventListener("DOMContentLoaded", async function () {
-            const username = "lutfyVX"; // Perbaiki kesalahan penulisan
+            const username = "lutfyVX"; 
             const avatarImg = document.getElementById("github-avatar");
             const nameElement = document.getElementById("github-name");
         
@@ -34,7 +34,7 @@
                 if (!response.ok) throw new Error(`GitHub API error: ${response.status}`);
         
                 const data = await response.json();
-                avatarImg.src = data.avatar_url || "default-avatar.png"; // Gunakan default jika kosong
+                avatarImg.src = data.avatar_url || "default-avatar.png"; 
                 nameElement.textContent = data.name || data.login || "Nama tidak tersedia";
             } catch (error) {
                 console.error("Error fetching GitHub profile:", error);
