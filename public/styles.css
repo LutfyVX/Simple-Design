@@ -414,12 +414,6 @@ button, input:where([type='button'], [type='reset'], [type='submit']), ::file-se
 .aspect-square {
   aspect-ratio: 1 / 1;
 }
-.h-\[10px\] {
-  height: 10px;
-}
-.h-\[150px\] {
-  height: 150px;
-}
 .h-screen {
   height: 100vh;
 }
@@ -434,12 +428,6 @@ button, input:where([type='button'], [type='reset'], [type='submit']), ::file-se
 }
 .w-1\/2 {
   width: calc(1/2 * 100%);
-}
-.w-\[12px\] {
-  width: 12px;
-}
-.w-\[150px\] {
-  width: 150px;
 }
 .w-full {
   width: 100%;

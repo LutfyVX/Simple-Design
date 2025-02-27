@@ -92,34 +92,3 @@ const observer = new MutationObserver(() => {
 
 observer.observe(htmlElement, { attributes: true, attributeFilter: ['class'] });
 
-//decryption text effect
-document.addEventListener("DOMContentLoaded", () => {
-    console.log("Script loaded"); // Cek apakah JS berjalan
-
-    function decryptText(element, originalText, speed = 50) {
-        if (!element) {
-            console.error("Element not found:", element);
-            return;
-        }
-
-        let letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+-=[]{}|;:',.<>?/";
-        let iterations = 0;
-
-        let interval = setInterval(() => {
-            element.textContent = originalText
-                .split("")
-                .map((char, i) => (i < iterations ? originalText[i] : letters[Math.floor(Math.random() * letters.length)]))
-                .join("");
-
-            iterations++;
-            if (iterations > originalText.length) clearInterval(interval);
-        }, speed);
-    }
-
-    setTimeout(() => {
-        decryptText(document.querySelector("#id-name .text-cyan-400"), "Naufal Lutfi");
-        decryptText(document.querySelector("#jp-name .text-cyan-400"), "ナウファル・ルトフィ");
-        decryptText(document.querySelector("#en-name .text-cyan-400"), "Lutfi's");
-        decryptText(document.querySelector("#pronoun"), "(he/him)");
-    }, 500);
-});
