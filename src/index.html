@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lutfy</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        html.dark {
+    background-color: #000000; /* Warna abu tua */
+    color: #e2e8f0; /* Warna teks putih */
+}
+#sakana-widget {
+  transform: scale(0.7); /* Sesuaikan skala */
+  transform-origin: center;
+}
+
+.dark #menu-btn {
+            color: #d1d5db;
+        }
+        .dark #mobile-menu {
+            background-color: #1f2937;
+            border-color: #374151;
+        }
+
+    </style>
+</head>
+<body class="font-mono text-2xl">
+    <div class="max-w-3xl mx-auto px-4 py-6">
+        <!-- Header -->
+        <header class="flex justify-between items-center mb-12">
+            <div class="flex items-center space-x-3">
+                <img id="github-avatar" class="w-12 h-12 rounded-full" alt="GitHub Profile Picture">
+                <h1 id="github-name" class="text-xl font-medium"></h1>
+            </div>
+            <nav class="flex space-x-4">
+                <div class="container mx-auto flex justify-center items-center">
+                    <div class="hidden md:flex space-x-4">
+                        <a href="#" class="text-cyan-400 hover:text-cyan-500">Home</a>
+                        <span class="text-gray-300">|</span>
+                        <a href="#" class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">About</a>
+                        <span class="text-gray-300">|</span>
+                        <a href="#" class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">Blog</a>
+                    </div>
+                    <button id="menu-btn" class="md:hidden text-gray-600 focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div id="mobile-menu" class="hidden md:hidden flex flex-col absolute top-16 left-0 w-full bg-white dark:bg-gray-800 border-t p-4 space-y-2 shadow-md">
+                    <a href="#" class="text-cyan-400 hover:text-cyan-500">Home</a>
+                    <a href="#" class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">About</a>
+                    <a href="#" class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">Blog</a>
+                </div>
+            </nav>
+            
+            <div class="flex space-x-4">
+                <button class="focus:outline-none" id="search-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                </button>
+                <button class="focus:outline-none" id="theme-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                    </svg>
+                </button>
+            </div>
+        </header>
+        
+        <!-- Intro Section -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-2">Hi, I'm</h2>
+            <div class="mb-4">
+                <p class="text-lg" id="id-name"><span class="text-gray-500">(id)</span> <span class="text-cyan-400">Naufal Lutfi</span></p>
+                <p class="text-lg" id="jp-name"><span class="text-gray-500">(jp)</span> <span class="text-cyan-400">ナウファル・ルトフィ</span></p>
+                <p class="text-lg" id="en-name"><span class="text-gray-500">(en)</span> <span class="text-cyan-400">Lutfi's</span></p>
+                <p class="text-lg text-gray-500" id="pronoun">(he/him)</p>
+            </div>
+        </section>
+            <p class="text-lg mb-6">
+                An Student From SMK TARUNA BHAKTI Who likes Coding, Watching Anime, and Playing Games.  
+            </p>
+            <div class="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mb-6">
+                <div class="flex items-center space-x-4">
+                    <div class="w-12 h-12 bg-gray-200 dark:bg-gray-700 rounded-full"></div>
+                    <div class="w-48 h-4 bg-gray-200 dark:bg-gray-700 rounded"></div>
+                </div>
+            </div>
+            <div class="flex space-x-6">
+                <a href="#" class="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
+                    <span class="sr-only">GitHub</span>
+                    <i class="fab fa-github text-xl"></i>
+                </a>
+                <a href="#" class="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
+                    <span class="sr-only">Twitter</span>
+                    <i class="fab fa-twitter text-xl"></i>
+                </a>
+                <a href="#" class="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
+                    <span class="sr-only">Discord</span>
+                    <i class="fab fa-discord text-xl"></i>
+                </a>
+                <a href="#" class="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
+                    <span class="sr-only">Email</span>
+                    <i class="fas fa-envelope text-xl"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- Posts Section -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-4">News</h2>
+            <div class="space-y-4">
+                <div class="flex inline-grid">
+                    <span class="dark:text-gray-300 text-gray-500 flex-shrink-0">Feb 26, 2025</span>
+                    <a href="https://www.cnbcindonesia.com/market/20250226071006-17-613674/prabowo-resmikan-danantara-bos-bank-mandiri-ungkap-dampaknya" class="text-gray-600 dark:text-gray-400 hover:text-white dark:hover:text-gray-300 text-xl hover:underline">Prabowo Resmikan Danantara, Bos Bank Mandiri Ungkap Dampaknya</a>
+                </div>
+                <div class="flex inline-grid">
+                    <span class="dark:text-gray-300 text-gray-500 flex-shrink-0">Feb 26, 2025</span>
+                    <a href="https://nasional.kompas.com/read/2025/02/26/07132731/skandal-korupsi-pertamina-2018-2023-pertalite-dioplos-jadi-pertamax?page=all" class="text-gray-600 dark:text-gray-400 hover:text-white dark:hover:text-gray-300 text-xl hover:underline">Korupsi Pertamina 2018-2023, Pertalite Dioplos Jadi Pertamax</a>
+                </div>
+        <!-- Projects Section -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-4">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <!-- Project 1 -->
+                <div class="border border-gray-200 dark:border-gray-700 rounded-md p-4">
+                    <h3 class="font-medium mb-2"><a href="#" class="text-cyan-400 hover:text-cyan-500">Kobokan</a></h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">Aku Sayang KOBO!</p>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="border border-gray-200 dark:border-gray-700 rounded-md p-4">
+                    <h3 class="font-medium mb-2"><a href="#" class="text-cyan-400 hover:text-cyan-500">Lorem Ipsum</a></h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia i!</p>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="border border-gray-200 dark:border-gray-700 rounded-md p-4">
+                    <h3 class="font-medium mb-2"><a href="#" class="text-cyan-400 hover:text-cyan-500">Lorem Ipsum</a></h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex magnam facilis molestiae, iusto repudiandae at laboriosam, molestias aut neque repellat nulla adipisci architecto voluptatibus iste, incidunt eveniet totam ad nemo..</p>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="border border-gray-200 dark:border-gray-700 rounded-md p-4">
+                    <h3 class="font-medium mb-2"><a href="#" class="text-cyan-400 hover:text-cyan-500">Lorem Ipsum</a></h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum perferendis quam eveniet, saepe voluptatibus laboriosam laudantium fugiat, voluptatem non a vel voluptates pariatur, esse rerum quasi alias asperiores repellat sint..</p>
+                </div>
+                
+
+            </div>
+        </section>
+
+        <!-- Friends Section -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-4">Friends :3</h2>
+            <div class="flex flex-wrap gap-4">
+                <a href="#" class="block">
+                    <img src="/api/placeholder/60/60" alt="F-1" class="w-16 h-16 rounded-md">
+                </a>
+                <a href="#" class="block">
+                    <img src="/api/placeholder/60/60" alt="F-2" class="w-16 h-16 rounded-md">
+                </a>
+            </div>
+        </section>
+
+        <!-- <div class="sakana-box"></div> -->
+
+        <!-- Footer -->
+        <footer class="pt-6 border-t border-gray-200 dark:border-gray-700 flex justify-between items-center text-sm text-gray-500">
+            <div>© Lutfy. <span class="text-cyan-400"></span> </div>
+            <nav class="flex space-x-4">
+                <a href="#" class="hover:text-gray-700 dark:hover:text-gray-300">Home</a>
+                <span class="text-gray-300">|</span>
+                <a href="#" class="hover:text-gray-700 dark:hover:text-gray-300">About</a>
+                <span class="text-gray-300">|</span>
+                <a href="#" class="hover:text-gray-700 dark:hover:text-gray-300">Blog</a>
+            </nav>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sakana"></script>
+    <script>
+        SakanaWidget.characters['custom'] = {
+          name: 'bchi', // Nama karakter
+          image: './assets/bocch.png', // Path gambar 
+          voice: null, // Tidak ada suara
+        };
+        // Inisialisasi widget dengan karakter baru
+        custom.init({
+          el:         '.sakana-box',     // 启动元素 node 或 
+          scale:      .5,                // 缩放倍数
+          canSwitchCharacter: true,      // 允许换角色
+        });
+      </script>
+      <script>
+        tailwind.config = {
+          darkMode: 'class',
+        };
+      </script>
+</body>
+</html>

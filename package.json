@@ -1,0 +1,19 @@
+{
+  "name": "simple-me",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "tailwindcss": "^4.0.9"
+  },
+  "dependencies": {
+    "framer-motion": "^12.4.7",
+    "react-text-transition": "^3.1.0"
+  }
+}

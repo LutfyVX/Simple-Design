@@ -1,13 +1,12 @@
-/** @type {import('tailwindcss').Config} */
-export default {
-    theme: {
-      extend: {
-        fontFamily: {
-          sans: ["Fira Code", "monospace"],
-          mono: ["Fira Code", "monospace"],
-        },
+module.exports = {
+  darkMode: 'class', // Pastikan ini ada
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ["Fira Code", "monospace"],
+        mono: ["Fira Code", "monospace"],
       },
     },
-    plugins: [],
-  };
-  
+  },
+  plugins: [],
+};
